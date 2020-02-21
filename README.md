@@ -7,7 +7,7 @@ Oleh Kelompok B06
 ## Soal
 * [Nomor 1](#nomor1)
 * [Nomor 2](#nomor2)
-  * [Nomor 2.a. dan 2.b.](#nomor-2a)
+  * [Nomor 2.a. dan 2.b.](#nomor-2a-dan-2b)
 * [Nomor 3](#nomor3)
 ----------------------------------------------------------------
 
@@ -60,13 +60,34 @@ _**Penjelasan:**_\
     done
 ```
 
-#### Nomor 2.b.
+#### Nomor 2.c.
+_**Soal 2.c.:**_\
+Kemudian supaya file .txt tersebut tidak mudah diketahui maka nama filenya akan di
+enkripsi dengan menggunakan konversi huruf (string manipulation) yang disesuaikan
+dengan jam(0-23) dibuatnya file tersebut dengan program terpisah dengan (misal:
+password.txt dibuat pada jam 01.28 maka namanya berubah menjadi qbttxpse.txt
+dengan perintah ‘​ bash soal2_enkripsi.sh password.txt’. Karena p adalah huruf ke 16 dan
+file dibuat pada jam 1 maka 16+1=17 dan huruf ke 17 adalah q dan begitu pula
+seterusnya. Apabila melebihi ​ z ​ , akan kembali ke ​ a ​ , contoh: huruf ​ w dengan jam 5.28,
+maka akan menjadi huruf ​ b.​ )
 
-
-_Note: Nomor 2.b. dan 2.c. digabung menjadi satu file bash_\
-
-_Source Code:_ [Sumber](https://github.com/prolifel/SoalShiftSISOP20_modul1_B06/blob/master/soal2/soal2_enkripsi.sh)
+> _Source Code:_ [Sumber](https://github.com/prolifel/SoalShiftSISOP20_modul1_B06/blob/master/soal2/soal2_enkripsi.sh)
 
 _Penjelasan:_\
+Kemudian script `soal2_randomizer.sh`dijalankan dengan syntax:
+``` bash soal2_randomizer.sh password.txt ```
+Argumen `password.txt` diambil dengan menggunakan syntax `namafile=$*`.
+Setelah nama file diambil, kemudian nama file tersebut dipisahkan sehingga hanya mendapatkan _string_ nama file kemudian _string_ tersebut di-_assign_ ke sebuah array temp (`nama_temp`) tanpa ekstensinya. Hal ini dapat dilakukan dengan cara:
+```
+# ------ Memisahkan nama file txt dari ekstensi ------ #
+IFS='.'		# Char yang ingin dipisah
+
+read -ra nama_temp <<< "$namafile"	# Read namafile, kemudian 
+	# r = backslash bukan sebagai escape
+	# a = kata yang uda dipisah, dimasukkin ke array nama_temp
+	# nama file yang kepisah, masuk ke element 1
+
+IFS=' '
+```
 
 ### Nomor 3
