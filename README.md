@@ -7,7 +7,7 @@ Oleh Kelompok B06
 ## Soal
 * [Nomor 1](#nomor1)
 * [Nomor 2](#nomor2)
-  * [Nomor 2.a.](#nomor2a)
+  * [Nomor 2.a.](#nomor-2a)
 * [Nomor 3](#nomor3)
 ----------------------------------------------------------------
 
@@ -29,7 +29,7 @@ _Penjelasan:_\
    dapat menghasilkan password secara acak sebanyak 28 karakter yang terdapat huruf
    besar, huruf kecil, dan angka.
    
-   _Source Code:_\ [Sumber](https://github.com/prolifel/SoalShiftSISOP20_modul1_B06/blob/master/soal2/soal2_randomizer.sh)
+   _Source Code:_ [Sumber](https://github.com/prolifel/SoalShiftSISOP20_modul1_B06/blob/master/soal2/soal2_randomizer.sh)
    
    _Penjelasan:_\
    Script Bash yang dibuat adalah script randomizer sebanyak 28 karakter dengan karakteristik
