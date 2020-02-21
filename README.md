@@ -12,11 +12,11 @@ Oleh Kelompok B06
 ----------------------------------------------------------------
 
 ### Nomor 1
-_Penjelasan:_\
+_**Penjelasan:**_\
 
 
 ### Nomor 2
-  _Soal:_\
+  _**Soal:**_\
   Pada suatu siang, laptop Randolf dan Afairuzr dibajak oleh seseorang dan kehilangan
   data-data penting. Untuk mencegah kejadian yang sama terulang kembali mereka
   meminta bantuan kepada Whits karena dia adalah seorang yang punya banyak ide.
@@ -24,16 +24,16 @@ _Penjelasan:_\
   tersebut cepat diselesaikan. Idenya adalah kalian
     
    #### Nomor 2.a. dan 2.b.
-   _**Note: Source Code untuk nomor 2.a. dan 2.b. digabung menjadi satu file script agar memudahkan assign nama file**_
+   > _**Note: Source Code untuk nomor 2.a. dan 2.b. digabung menjadi satu file script agar memudahkan assign nama file**_
    
-   _Soal 2.a.:_\
+   _**Soal 2.a.**:_\
    membuat sebuah script bash yang
    dapat menghasilkan password secara acak sebanyak 28 karakter yang terdapat huruf
    besar, huruf kecil, dan angka.
    
-   _Source Code:_ [Sumber](https://github.com/prolifel/SoalShiftSISOP20_modul1_B06/blob/master/soal2/soal2_randomizer.sh)
+   > _Source Code:_ [Sumber](https://github.com/prolifel/SoalShiftSISOP20_modul1_B06/blob/master/soal2/soal2_randomizer.sh)
    
-   _Penjelasan:_\
+   _**Penjelasan**:_\
    Script Bash yang dibuat adalah script randomizer sebanyak 28 karakter dengan karakteristik
    huruf besar, huruf kecil, dan angka.
    Karena randomizer akan menghasilkan sebuah sequence, maka dari itu, digunakan fungsi `randomcok()`
@@ -46,10 +46,10 @@ _Penjelasan:_\
     done
    ```
    
-   _Soal 2.b.:_\
+   _**Soal 2.b.:**_\
    Password acak tersebut disimpan pada file berekstensi .txt dengan nama berdasarkan argumen yang diinputkan dan ​ HANYA ​ berupa alphabet​ .
    
-   _Penjelasan:_\
+   _**Penjelasan:**_\
    Hasil pengulangan array random tadi kemudian di-_print & assign_ sebanyak 28 karakter (`${array[@]::28}`) sebagai _string_ (mengapa format `printf`nya `%s`) `/home/bonisaz/Sisop/modul_1/Shift_1/$k.txt`. `$k` disini adalah argumen yang didapat ketika menjalankan script `soal2_randomizer.sh`.
    
    Setelah fungsi `randomcok()` dibuat, script dijalankan dengan memasukkan sebuah argumen sebagai nama file text yang akan dibuat. Oleh karena itu, dilakukan _looping_ scan argumen dengan cara
